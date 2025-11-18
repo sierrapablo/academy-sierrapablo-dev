@@ -1,6 +1,7 @@
 services:
   moodle:
-    image: bitnami/moodle:4.4.5-debian-12-r0
+    image: bitnamilegacy/moodle:5.0.2-debian-12-r2
+    restart: unless-stopped
     container_name: moodle
     ports:
       - "${MOODLE_HTTP_PORT}:8080"
@@ -24,6 +25,7 @@ services:
   mariadb:
     image: bitnami/mariadb:latest
     container_name: moodle_db
+    restart: unless-stopped
     environment:
       - MARIADB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
       - MARIADB_DATABASE=${DB_NAME}
