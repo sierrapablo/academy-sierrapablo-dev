@@ -1,6 +1,6 @@
 services:
   moodle:
-    image: bitnami/moodle:latest
+    image: bitnamicharts/moodle
     container_name: moodle
     ports:
       - "${MOODLE_HTTP_PORT}:8080"
