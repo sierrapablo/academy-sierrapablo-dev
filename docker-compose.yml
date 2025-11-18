@@ -1,6 +1,6 @@
 services:
   moodle:
-    image: lthub/moodle:master
+    image: bitnami/moodle:4.4.5-debian-12-r0
     container_name: moodle
     ports:
       - "${MOODLE_HTTP_PORT}:8080"
