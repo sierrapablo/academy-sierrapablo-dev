@@ -1,6 +1,6 @@
 services:
   moodle:
-    image: bitnamicharts/moodle
+    image: bitnamicharts/moodle:sha256-a400bee75c17a475fe4dbb11f81377e7cd17ddb22ec10537a33633c1aa3233a5
     container_name: moodle
     ports:
       - "${MOODLE_HTTP_PORT}:8080"
